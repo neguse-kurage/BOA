@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+
+    <link rel="shortcut icon" href="favicon.ico" />
+		<title>BOA</title>
+		<script src="BOA.js"></script>
+    <script src="Gcode.js"></script>
+    </head>
+
+    <body>
+      <img src="title.png" width="400" height="150" alt="BOA"><br>
+      File Name<input type="text" id="Name" value="test.gcode"><br>
+      <br>
+      Extruder temperature<input type="text" id="Extruder" value="230">℃<br>
+      Bed temperature<input type="text" id="Bed" value="0">℃<br>
+      Hed speed<input type="text" id="ESpeed" value="500">mm/min<br>
+      Extrude speed<input type="text" id="FSpeed" value="7">mm/10mm<br>
+      <input type="checkbox" id="Origin" checked="checked">Move to Origin before start　　　　　※ If not work, try this<br>
+      <br>
+      <input type="radio" name="Mode" checked="checked" onchange="Change()">Square
+      <input type="radio" name="Mode" onchange="Change()">Hexagon
+      <input type="radio" name="Mode" onchange="Change()">Circle　　　　　※ Scroll down to show the origin and dimensions<br>
+      StartX<input type="text" id="StartX" value="0">mm<br>
+      StartY<input type="text" id="StartY" value="0">mm<br>
+      X<input type="text" id="X" value="200" onchange="Change()">mm<br>
+      <div id="Change">Y<input type="text" id="Y" value="200">mm<br></div>
+      Hight<input type="text" id="Hight" value="100">mm<br>
+      G_Width<input type="text" id="G_Width" value="5">mm<br>
+      Times<input type="text" id="Times" value="3">times<br>
+      <br>
+      <a id="download" href="#" download="BOA.gcode" onclick="OF()">Make Gcode</a><br>
+      <br>
+      Ver5.1<br>
+            <img src="Square.png" width="400" height="400"><img src="Hexagon.png" width="400" height="400"><img src="Circle.png" width="400" height="400"><br>
+            <div align="right">
+            <img src="Wunder_kummer_last.jpg"  width="200" height="200" alt="Wunder kummer">
+            </div>
+    </body>
+</html>
